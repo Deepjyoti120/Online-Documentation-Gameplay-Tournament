@@ -8,28 +8,15 @@
     <meta name="description" content />
     <meta name="author" content />
     <title>Gameplay</title>
-
-
-
     <link href="dist/assets/css/styles.min.css" rel="stylesheet" />
-
-
-
-    <link rel="icon" type="image/x-icon"
-        href="dist/images/logo.png" />
-
-
+    <link rel="icon" type="image/x-icon" href="dist/images/logo.png" />
     <script src="packages/featherIcon/js/feather.min.js"></script>
-
-
-
 </head>
 
 <body style="position: relative;" data-spy="scroll" data-offset="5" data-target="#XScrollspy" class="nav-fixed">
     <header>
         <nav class="topnav navbar shadow navbar-expand navbar-light bg-white bgh-dark " id="sidenavAccordion">
-            <a class="navbar-brand d-none d-sm-block " href="index.html"><img class="logoimg"
-                    src="dist/images/logo.png"
+            <a class="navbar-brand d-none d-sm-block " href="index.html"><img class="logoimg" src="dist/images/logo.png"
                     alt="logo"> Gameplay</a>
             <a type="button" id="sidebarToggleTop" class="waves-effect waves-dark btn">
                 <h1><i class="customMenu" data-feather="menu"></i></h1>
@@ -156,13 +143,24 @@
                                             <p class="docDetails textNone taskBg">3. Enable
                                                 <code class="codePreview1">Google & Anonymous</code> Provider.</p>
 
-                                            <p class="docDetails textNone taskBg text-center">
-                                                <code class="h5 codePreview1">
-                                                    Please Download & follow Video tutorials :-
-                                                </code> </p>
                                             <p class="docDetails textNone taskBg">
                                                 <code class="codePreview1">Google Firebase Setup</code> </p>
+
+                                            <p class="docDetails textNone taskBg">4. Create your own
+                                                <code class="codePreview1">google-services.json</code> file from
+                                                https://console.firebase.google.com/ and replace it for both app.</p>
+
+                                            <p class="docDetails textNone taskBg">5. For release open android studio and
+                                                use
+                                                <code class="codePreview1">gradle signingreport</code> command to create
+                                                release signin report for your own app. Otherwise both app Google signin
+                                                features will not work. </p>
                                             <p style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden"
+                                                class="docDetails textNone taskBg text-center">
+                                                <img style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
+                                                    src="./dist/images/signin01.png" alt="">
+                                            </p>
+                                            <!-- <p style="position:relative;padding-bottom:56.25%;height:0;overflow:hidden"
                                                 class="docDetails textNone taskBg">
                                                 <iframe
                                                     style="position:absolute;top:0;left:0;width:100%;height:100%;border:0"
@@ -170,15 +168,16 @@
                                                     title="YouTube video player" frameborder="0"
                                                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                                                     allowfullscreen></iframe>
-                                            </p>
+                                            </p> -->
                                             <p class="docDetails textNone taskBg text-center">
                                                 Copy the CMD line<code class="h5 codePreview1">keytool -list -v -alias
                                                     androiddebugkey -keystore
-                                                    %USERPROFILE%\.android\debug.keystore</code> (if required password then password is:-  <code class="codePreview1">android</code>  )Then Hit Enter
-                                            </p> 
+                                                    %USERPROFILE%\.android\debug.keystore</code> (if required password
+                                                then password is:- <code class="codePreview1">android</code> )Then Hit
+                                                Enter
+                                            </p>
                                             <p class="docDetails textNone taskBg text-center">
-                                                Now copy both <code class="h5 codePreview1">SHA1:</code> & <code
-                                                    class="h5 codePreview1">SHA256:</code>
+                                                Now copy <code class="h5 codePreview1">SHA1:</code>
                                                 Certificate fingerprints. add go to firebase app project settings and
                                                 add Fingerprints.
                                             </p>
@@ -188,8 +187,9 @@
                                                     src="./dist/images/firebaseCertificate.png" alt="">
                                             </p>
                                             <p class="docDetails textNone taskBg text-center"> <code
-                                                    class="codePreview1">Add 2 certificate for each APP.(user app one is
-                                                    admin app) Total Certificate will be 2+2 = 4 </code> </p>
+                                                    class="codePreview1">Add 2 certificate for each APP. One is Debug
+                                                    and another is for Release version of apk. (skip debug if you do not
+                                                    want to test your app.)</code> </p>
                                             <p class="docDetails textNone taskBg text-center"> <code
                                                     class="codePreview1">Follow For both Admin & User
                                                     app. (is Important)</code> </p>
@@ -197,6 +197,102 @@
                                     </div>
                                 </div>
 
+                                <div class="bottompadding50" id="Default">
+                                    <div class="card">
+                                        <p class="h4 taskBg text-center">Realtime Notification</p>
+                                        <div class="card-body">
+                                            <p class="docDetails textNone taskBg">1. Follow below direction in lib
+                                                folder to config -> notification -> notification.js-></p>
+                                            <ul class="file-list">
+                                                <li class="icon-none"> android
+                                                    <ul>
+                                                        <li class="icon-none">android folders*
+                                                            <ul>
+                                                                <li>androidFiles.***</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>androidFiles.***</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="icon-none"> ios <ul>
+                                                        <li class="icon-none">ios folders*
+                                                            <ul>
+                                                                <li>iosFiles.***</li>
+                                                            </ul>
+                                                        </li>
+                                                        <li>iosFiles.***</li>
+                                                    </ul>
+                                                </li>
+                                                <li class="icon-none"> lib
+                                                    <!--        -->
+                                                    <ul>
+                                                        <li class="icon-none">config
+                                                            <ul>
+                                                                <li class="icon-none">notification
+                                                                    <ul>
+                                                                        <li>workingfile1.dart</li>
+                                                                        <li>notification.js</li>
+                                                                    </ul>
+                                                                </li>
+                                                            </ul>
+                                                            <ul>
+                                                                <li>workingfile1.dart</li>
+                                                                <li>workingfile2.dart</li>
+                                                                <li>workingfile3.dart</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li class="icon-none">games
+                                                            <ul>
+                                                                <li>workingfile1.dart</li>
+                                                                <li>workingfile2.dart</li>
+                                                                <li>workingfile3.dart</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li class="icon-none">services
+                                                            <ul>
+                                                                <li>workingfile1.dart</li>
+                                                                <li>workingfile2.dart</li>
+                                                                <li>workingfile3.dart</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li class="icon-none">settings
+                                                            <ul>
+                                                                <li>workingfile1.dart</li>
+                                                                <li>workingfile2.dart</li>
+                                                                <li>workingfile3.dart</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li class="icon-none">tournaments
+                                                            <ul>
+                                                                <li>workingfile1.dart</li>
+                                                                <li>workingfile2.dart</li>
+                                                                <li>workingfile3.dart</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                    <ul>
+                                                        <li class="icon-none">ui
+                                                            <ul>
+                                                                <li>workingfile1.dart</li>
+                                                                <li>workingfile2.dart</li>
+                                                                <li>workingfile3.dart</li>
+                                                            </ul>
+                                                        </li>
+                                                    </ul>
+                                                </li>
+                                                <li>pubspec.yaml</li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
                                 <div class="bottompadding50" id="Default">
                                     <div class="card">
                                         <p class="docDetails textNone taskBg text-center"><code
